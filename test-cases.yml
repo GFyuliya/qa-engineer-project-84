@@ -307,5 +307,30 @@
   expected-result: |
     Все элементы страницы переведены на русский язык, кроме наименований брендов
 
+- summary: | 
+    проверка доступности сайта при медленном интернет-соединении (через devtools) 
+  requirement: |
+    С
+  prerequisites:
+    
+  test-data: |
+    нет данных
+  steps:
+    - шаг 1
+  expected-result: |
+    Загрузка страница в пределах 3 секунд
+
+
+- summary: | 
+    Важно, чтобы сайт мог обрабатывать большое количество трафика
+  requirement: |
+    С
+  prerequisites:
+    
+  test-data: |
+    нет данных
+  steps:
+    - шаг 1
+  expected-result: |
 
     
