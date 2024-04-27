@@ -87,7 +87,7 @@ test-cases:
 
 bugreports:
   - summary: |
-      При выборе пустой категории нельзя отфильтровать товары по другим параметрам
+      Некорректно работает фильтрация и поиск, если выбран пустой пункт в "Category"
     environment: |
       Google Chrome Версия 123.0.6312.86 (Официальная сборка), (64 бит)
       ОС Windows 10 (x64)
@@ -97,7 +97,7 @@ bugreports:
     expected-result: |
       В каталоге остались товары соответствующие выбранному бренду
     actual-result: |
-      В каталоге отображаются все товары. Аналогичная проблема при фильтрации по цене
+      В каталоге отображаются все товары. Аналогичная проблема при фильтрации по цене и поиске
 
 
   - summary: |
@@ -126,8 +126,35 @@ bugreports:
   actual-result: |
       В каталоге отображаются все товары
 
+- summary: |
+    Нет сообщения "Nothing found!", если нет товаров удовлетворяющих выбранные фильтры
+  environment: |
+      Google Chrome Версия 123.0.6312.86 (Официальная сборка), (64 бит)
+      ОС Windows 10 (x64)
+  steps-to-reproduce: |
+      1. Выбрать категорию "skincare" 
+      2. Отметить бренд "Apple"
+      3. В фильтре по цене укзаать значения от 1 до 10
+  expected-result: |
+      Без перезагрузки страницы должно появиться сообщение "Nothing found!"
+  actual-result: |
+      В каталоге отображаются все товары
 
- - summary: |
+- summary: |
+    Фильтр по цене учитывает цену без скидки
+  environment: |
+      Google Chrome Версия 123.0.6312.86 (Официальная сборка), (64 бит)
+      ОС Windows 10 (x64)
+  steps-to-reproduce: |
+      1. Выбрать категорию "groceries"  (для удобства визуального отслеживания результата)
+      2. В фильтре по цене ввести значения от 0 до 61 (60.49$ - цена со скидкой самого дорогого товара, его цена без скидки 70$)
+  expected-result: |
+      В каталоге остались товары стоимостью от 0$ до 61$ со скидкой
+  actual-result: |
+      В каталоге не отображается товар, цена которого без скидки превышает 61$
+
+
+- summary: |
     Кнопка "Add to cart" и кол-во товара выходят за границы карточки товара
   environment: |
       Google Chrome Версия 123.0.6312.86 (Официальная сборка), (64 бит)
@@ -139,10 +166,4 @@ bugreports:
   actual-result: |
       Наименование товара, описание, цена со скидкой и без, кнопка "Add to cart" находятся в пределах карточки товара, не выходят за ее границы.
       Аналогично с брендами на первой странице: Infinix, Royal_Mirage, Lord - Al-Rehab, Saaf & Khaas, Baking Food Items, Dry Rose, Boho Decor, Golden;
-      на второй странице: Ratttan Outdoor, Kitchen Shelf, Multi Purpose, RED MICKY MOUSE.., Digital Printed, IELGY fashion, Synthetic Leather
-
-
-      фильтр по цене - не пишет ничего не найдено, фильтр учитывает цену без скидки
-      проверить фильтрацию по нескольким параметрам
-      опечатка Royal_Mirage - Royal Mirage
-      Lord - Al-Rehab - бренд только Al Rehab 
+      на второй странице: Ratttan Outdoor, Kitchen Shelf, Multi Purpose, RED MICKY MOUSE.., Digital Printed, IELGY fashion, Synthetic Leather.
