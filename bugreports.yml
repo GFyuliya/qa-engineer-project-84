@@ -303,6 +303,16 @@
     Кнопка "Cart" находится только в верхнем меню, нет быстрого перехода на верх страницы.
 
 
-    нельзя просмотреть фотографии товара на станице товара
+- summary: |
+    Опечатки в названих бренда
+  environment: |
+    Google Chrome Версия 123.0.6312.86 (Официальная сборка), (64 бит)
+    ОС Windows 10 (x64)
+  steps-to-reproduce: |
+    1. 
+  expected-result: |
+    Названия брендов "Royal Mirage", "Al Rehab" и "RED MICKY MOUSE"
+  actual-result: |
+    Названия брендов "Royal_Mirage", "Lord - Al-Rehab", "RED MICKY MOUSE.."
 
 
