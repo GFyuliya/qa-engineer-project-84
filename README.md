@@ -1,9 +1,7 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/GFyuliya/qa-engineer-project-84/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/GFyuliya/qa-engineer-project-84/actions)
 
-<h3><a>https://hexlet-products-store.vercel.app/</a> - тестируемое приложение</h3>
-
-В этом проекте проведено тестирование небольшого интернет-магазин по продаже вещей.
+<h3>В этом проекте проведено тестирование небольшого <a href="https://hexlet-products-store.vercel.app/"> интернет-магазина</a> по продаже вещей.</h3>
 <p>Заказчик предъявляет следующие требования к приложению:</p>
 <ul>
   <li>Нужно разработать интерфейс интернет-магазина с просмотром и фильтрацией товаров, а также добавлением их в корзину.</li>
