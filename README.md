@@ -1,6 +1,6 @@
 
 <h3>В этом проекте проведено тестирование небольшого <a href="https://hexlet-products-store.vercel.app/"> интернет-магазина</a></h3>
-<h6>Учебный проект с курса <a href="https://ru.hexlet.io/programs/qa-engineer"> Инженер по тестированию"</a> от Хекслет</h6>
+<h6>Учебный проект с курса <a href="https://ru.hexlet.io/programs/qa-engineer"> "Инженер по тестированию"</a> от Хекслет</h6>
 
   Заказчик предъявляет следующие требования:
 <ul>
