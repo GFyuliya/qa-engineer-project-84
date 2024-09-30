@@ -41,6 +41,7 @@
   actual-result: |
     Ошибка - Status: 500 (Internal Server Error). Скриншот - 500-server-error.png
 
+#добавить баг-репорт для: Проверка поиска товара по ключевому слову (для RU)
 
 - summary: |
     В фильтре "Category" нет пункта "deselect"
